@@ -18,6 +18,7 @@ table {
 
 .table {
   width: 100%;
+  font-size: @baseFontSize;
   margin-bottom: @baseLineHeight;
   // Cells
   th,
@@ -26,7 +27,6 @@ table {
     line-height: @baseLineHeight;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid @tableBorder;
   }
   th {
     font-weight: bold;
@@ -62,6 +62,12 @@ table {
   }
 }
 
+.table-double-condensed {
+  th,
+  td {
+    padding: 3px 4px;
+  }
+}
 
 // BORDERED VERSION
 // ----------------
@@ -150,6 +156,12 @@ table {
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {
       background-color: @tableBackgroundAccent;
+    }
+	tr:nth-child(odd) td,
+    tr:nth-child(odd) th {
+	  &.default-background {
+	    background-color: @bodyBackground;
+	  }
     }
   }
 }

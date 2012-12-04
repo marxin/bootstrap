@@ -15,6 +15,7 @@
 @gray:                  #555;
 @grayLight:             #999;
 @grayLighter:           #eee;
+@grayLightest:			#f5f5f5;
 @white:                 #fff;
 
 
@@ -54,7 +55,7 @@
 @altFontFamily:         @serifFontFamily;
 
 @headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -70,9 +71,9 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           1px 6px;   // 24px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      0;
+@borderRadiusLarge:     0;
+@borderRadiusSmall:     0;
 
 
 // Tables
@@ -180,17 +181,17 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
+@navbarHeight:                    34px;
+@navbarBackgroundHighlight:       #8EBE3F;
+@navbarBackground:                #8EBE3F;
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      #066239;
 
 @navbarBrandColor:                @navbarLinkColor;
 

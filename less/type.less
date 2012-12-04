@@ -71,18 +71,25 @@ h1,
 h2,
 h3 { line-height: @baseLineHeight * 2; }
 
-h1 { font-size: @baseFontSize * 2.75; } // ~38px
-h2 { font-size: @baseFontSize * 2.25; } // ~32px
-h3 { font-size: @baseFontSize * 1.75; } // ~24px
-h4 { font-size: @baseFontSize * 1.25; } // ~18px
+h1 { font-size: @baseFontSize * 2.0; } // ~26px
+h2 { font-size: @baseFontSize * 1.75; }
+h3 { font-size: @baseFontSize * 1.5; }
+h4 { font-size: @baseFontSize * 1.25; }
 h5 { font-size: @baseFontSize; }
-h6 { font-size: @baseFontSize * 0.85; } // ~12px
+h6 { font-size: @baseFontSize * 0.75; }
+
+h1 { margin-top: @baseLineHeight * 2; }
 
 h1 small { font-size: @baseFontSize * 1.75; } // ~24px
 h2 small { font-size: @baseFontSize * 1.25; } // ~18px
 h3 small { font-size: @baseFontSize; }
 h4 small { font-size: @baseFontSize; }
 
+h1, h2, h3, h4, h5, h6 {
+  &.underline {
+	border-bottom: 1px solid @grayLight;
+  }
+}
 
 // Page header
 // -------------------------
@@ -116,6 +123,19 @@ ul.unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
+}
+
+ul.spaced, ol.spaced {
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+ul.highlight, ol.highlight {
+  li {
+    background-color: @grayLightest;
+    padding-left: 4px;
+  }
 }
 
 // Description Lists
