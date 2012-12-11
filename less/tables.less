@@ -69,6 +69,28 @@ table {
   }
 }
 
+// FILTER & SORTING BARS
+.filter-bar {
+  th {
+    background-color: @grayLighter;
+	padding-top: 12px;
+	select {
+	  width: 100%;
+	}
+	input {
+	  width: 96%;
+	}
+  }
+  button {
+    margin-bottom: 10px;
+  }  
+}
+
+.sorting-bar td {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 // BORDERED VERSION
 // ----------------
 
@@ -175,6 +197,9 @@ table {
     tr:hover td,
     tr:hover th {
       background-color: @tableBackgroundHover;
+	  &.default-background {
+	    background-color: @bodyBackground;
+	  }
     }
   }
 }
