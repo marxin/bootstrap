@@ -188,6 +188,13 @@ table {
   }
 }
 
+// CENTER TABLE
+.table-centered {
+  th,
+  td {
+    text-align: center;
+  }
+}
 
 // HOVER EFFECT
 // ------------
@@ -256,6 +263,36 @@ table th[class*="span"],
   }
 }
 
+.table tbody tr {
+  td.success {
+    background-color: @successBackground;
+  }
+  td.error {
+    background-color: @errorBackground;
+  }
+  td.warning {
+    background-color: @warningBackground;
+  }
+  td.info {
+    background-color: @infoBackground;
+  }
+}
+
+.table thead tr {
+  th.success {
+    background-color: @successBackground;
+  }
+  th.error {
+    background-color: @errorBackground;
+  }
+  th.warning {
+    background-color: @warningBackground;
+  }
+  th.info {
+    background-color: @infoBackground;
+  }
+}
+
 // Hover states for .table-hover
 .table-hover tbody tr {
   &.success:hover td {
@@ -268,6 +305,36 @@ table th[class*="span"],
     background-color: darken(@warningBackground, 5%);
   }
   &.info:hover td {
+    background-color: darken(@infoBackground, 5%);
+  }
+}
+
+.table-hover tbody tr {
+  td.success:hover {
+    background-color: darken(@successBackground, 5%);
+  }
+  td.error:hover {
+    background-color: darken(@errorBackground, 5%);
+  }
+  td.warning:hover {
+    background-color: darken(@warningBackground, 5%);
+  }
+  td.info:hover {
+    background-color: darken(@infoBackground, 5%);
+  }
+}
+
+.table-hover tbody tr {
+  th.success:hover {
+    background-color: darken(@successBackground, 5%);
+  }
+  th.error:hover {
+    background-color: darken(@errorBackground, 5%);
+  }
+  th.warning:hover {
+    background-color: darken(@warningBackground, 5%);
+  }
+  th.info:hover {
     background-color: darken(@infoBackground, 5%);
   }
 }
