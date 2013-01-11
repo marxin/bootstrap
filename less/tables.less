@@ -190,6 +190,17 @@ table {
   }
 }
 
+table tbody {
+	tr:nth-child(odd) td.striped {
+	  background-color: @tableBackgroundAccent;
+	}
+	tr:nth-child(odd) td.striped {
+	  &.default-background {
+		background-color: @bodyBackground;
+	  }
+	}
+}
+
 // CENTER TABLE
 .table-centered {
   th,
@@ -244,6 +255,37 @@ table th[class*="span"],
   &.span12    { .tableColumns(12); }
 }
 
+.tableSpan(@span) {
+  width: 100% * @span / 24;
+}
+
+.table td,
+.table th {
+  &.tspan1     { .tableSpan(1); }
+  &.tspan2     { .tableSpan(2); }
+  &.tspan3     { .tableSpan(3); }
+  &.tspan4     { .tableSpan(4); }
+  &.tspan5     { .tableSpan(5); }
+  &.tspan6     { .tableSpan(6); }
+  &.tspan7     { .tableSpan(7); }
+  &.tspan8     { .tableSpan(8); }
+  &.tspan9     { .tableSpan(9); }
+  &.tspan10    { .tableSpan(10); }
+  &.tspan11    { .tableSpan(11); }
+  &.tspan12    { .tableSpan(12); }
+  &.tspan13    { .tableSpan(13); }
+  &.tspan14    { .tableSpan(14); }
+  &.tspan15    { .tableSpan(15); }
+  &.tspan16    { .tableSpan(16); }
+  &.tspan17    { .tableSpan(17); }
+  &.tspan18    { .tableSpan(18); }
+  &.tspan19    { .tableSpan(19); }
+  &.tspan20    { .tableSpan(20); }
+  &.tspan21    { .tableSpan(21); }
+  &.tspan22    { .tableSpan(22); }
+  &.tspan23    { .tableSpan(23); }
+  &.tspan24    { .tableSpan(24); }
+}
 
 
 // TABLE BACKGROUNDS
