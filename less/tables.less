@@ -94,6 +94,9 @@ table {
   button {
     margin-bottom: 10px;
   }  
+  .btn-group {
+    margin-bottom: 10px;
+  }  
 }
 
 .sorting-bar td {
@@ -183,19 +186,21 @@ table {
 // --------------
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
-.table-striped {
-  tbody {
-    tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
+
+.table-striped > tbody > tr:nth-child(odd):not(.row-detail) {
+	td,
+    th {
       background-color: @tableBackgroundAccent;
     }
-	tr:nth-child(odd) td,
-    tr:nth-child(odd) th {
+}
+
+.table-striped tbody tr:nth-child(odd) {
+	td,
+    th {
 	  &.default-background {
 	    background-color: @bodyBackground;
 	  }
-    }
-  }
+	}
 }
 
 table tbody {
@@ -220,16 +225,14 @@ table tbody {
 // HOVER EFFECT
 // ------------
 // Placed here since it has to come after the potential zebra striping
-.table-hover {
-  tbody {
-    tr:hover td,
-    tr:hover th {
+.table-hover > tbody {
+    > tr:hover:not(.row-detail) td,
+	> tr:hover:not(.row-detail) th {
       background-color: @tableBackgroundHover;
 	  &.default-background {
 	    background-color: @bodyBackground;
 	  }
     }
-  }
 }
 
 

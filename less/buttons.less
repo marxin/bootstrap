@@ -92,21 +92,29 @@
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 // Mini
 .btn-mini {
   padding: @paddingMini;
   font-size: @fontSizeMini;
-  .border-radius(@borderRadiusSmall);
+  .border-radius(@borderRadiusSmall);  
 }
 
-// Mini
+.btn-mini [class^="icon-"], .btn-mini [class*=" icon-"] {
+	margin-top: 2px;
+}
+
+// Micro
 .btn-micro {
   padding: @paddingMicro;
   font-size: @fontSizeMini;
   .border-radius(@borderRadiusSmall);
+}
+
+.btn-micro [class^="icon-"], .btn-micro [class*=" icon-"] {
+	margin-top: 2px;
 }
 
 // Block button
